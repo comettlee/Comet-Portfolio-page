@@ -1,7 +1,9 @@
 /* COMMON */
 body {
-    height: 3000px;
+    height: auto;
+    margin: 0px;
     position: relative;
+    overflow-x: hidden;
 }
 
 .inner {
@@ -20,14 +22,27 @@ a {
     color: black;
 }
 
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
 /* HEADER */
 header {
     width: 100%;
     height: 100px;
+    min-width: 700px;
     display: flex;
     align-items: center;
     position: fixed;
-    border-bottom: 3px solid #000;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 9;
 }
 
 header>.inner {
@@ -37,8 +52,9 @@ header>.inner {
 header .title {
     display: flex;
     text-decoration: none;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 35px;
+    font-weight: 800;
+    color: #fff;
 }
 
 header .main-menu {
@@ -46,30 +62,24 @@ header .main-menu {
     right: 10px;
 }
 
-header .main-menu a {
-    margin-right: 50px;
+header .main-menu a:nth-child(1) {
+    color: rgb(255, 184, 77);
 }
 
 div.main-menu {
-    font-family: Raleway;
     margin: 0 auto;
     text-align: center;
 }
 
 div.main-menu a {
-    color: #000;
-    text-decoration: none;
-    font-size: 20px;
+    color: #fff;
+    font-size: 25px;
     font-weight: 600;
     margin: 0px 10px;
-    padding: 10px 10px;
+    padding: 10px;
     position: relative;
     z-index: 0;
     cursor: pointer;
-}
-
-header .sub-menu {
-
 }
 
 header .sub-menu img {
@@ -83,31 +93,129 @@ header .sub-menu img {
 
 
 /* MAIN-MENU EFFECT */
-/* Top and Bottom borders come in */
-div.main-menu a:before,
 div.main-menu a:after {
     position: absolute;
     left: 0px;
     width: 100%;
     height: 2px;
-    background: #000;
+    background: #fff;
     content: "";
     opacity: 0;
     transition: all 0.3s;
-}
-
-div.main-menu a:before {
-    top: 0px;
-    transform: translateY(-10px);
-}
-
-div.main-menu a:after {
     bottom: 0px;
     transform: translateY(10px);
 }
 
-div.main-menu a:hover:before,
+
 div.main-menu a:hover:after {
     opacity: 1;
     transform: translateY(0px);
+}
+
+
+
+
+/* HOME */
+.home {
+    position: relative;
+}
+
+.home .inner {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.home .main-bg {
+    position: relative;
+    background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F99EC8F345E15918128E6D0");
+    filter: brightness(.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.home .home__about {
+    margin-left: 20px;
+}
+
+.home .home__head {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    transition: all 1s;
+    left: -100%;
+}
+
+.home .home__head.hidden {
+    opacity: 0;
+    left: -100%;
+}
+
+.home .home__head.show {
+    opacity: 1;
+    left: 0;
+}
+
+.home .home__info {
+    margin-top:20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    transition: all 1s;
+}
+
+.home .home__info.hidden {
+    opacity: 0;
+    left: -100%;
+}
+
+.home .home__info.show {
+    opacity: 1;
+    left: 0;
+}
+
+/* PROFILE */
+.profile {
+    background-color: #000;
+}
+
+
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: 100px;
+    min-width: 700px;
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
+}
+
+.footer .inner {
+    width: 1500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer .link-list {
+    width: 100%;
+    display: flex;
+}
+
+.footer .link-list .link-item {
+    width: 100px;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.footer .copyright {
+    width: 100%;
+    color: #999;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 180px;
 }
