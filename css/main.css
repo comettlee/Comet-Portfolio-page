@@ -1,0 +1,113 @@
+/* COMMON */
+body {
+    height: 3000px;
+    position: relative;
+}
+
+.inner {
+    width: 1500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.title-icon {
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    border-bottom: 3px solid #000;
+}
+
+header>.inner {
+    display: flex;
+}
+
+header .title {
+    display: flex;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header .main-menu {
+    position: absolute;
+    right: 10px;
+}
+
+header .main-menu a {
+    margin-right: 50px;
+}
+
+div.main-menu {
+    font-family: Raleway;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.main-menu a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+header .sub-menu {
+
+}
+
+header .sub-menu img {
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+
+/* MAIN-MENU EFFECT */
+/* Top and Bottom borders come in */
+div.main-menu a:before,
+div.main-menu a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.main-menu a:before {
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+div.main-menu a:after {
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+div.main-menu a:hover:before,
+div.main-menu a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
