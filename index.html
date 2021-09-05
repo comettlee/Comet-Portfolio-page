@@ -21,6 +21,14 @@
     <meta property="twitter:image" content="http://127.0.0.1:5500/image/Comet_icon.png" />
     <meta property="twitter:url" content="https://comettlee.netlify.app/" />
 
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- GOOGLE FONT & MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <script defer src="./js/main.js"></script>
@@ -32,7 +40,8 @@
     <header class="header">
         <div class="inner">
             <a href="/" class="title">COMET</a>
-            <div class="main-menu">
+            <div class="material-icons list-icon">list</div>
+            <div class="main-menu hide">
                 <a>Home</a>
                 <a>Profile</a>
                 <a href="#">Skills</a>
@@ -58,23 +67,24 @@
 
     <!-- PROFILE -->
     <section id="Profile" class="profile">
-            <div class="profile__leftarea">
-                <h2 class="profile__title">PROFILE</h2>
-                <div class="profile__frame"></div>
-                <div class="profile__picture"></div>
-            </div>
-            <div class="profile__rightarea">
-                <div class="profile__textgroup">
-                    <div class="profile__nameBox">
-                        <h2 class="profile__nameK">이혜성</h2><p class="profile__nameE">LEE HYESUNG</p>
-                    </div>
-                    <div class="profile__job"></div>
-                    <div class="profile__email">asd</div>
-                    <div class="profile__phone">ss</div>
-                    <div class="profile__gitadrees">s</div>
-                    <div class="profile__gitadrees">s</div>
+        <div class="profile__leftarea">
+            <h2 class="profile__title">PROFILE</h2>
+            <div class="profile__frame"></div>
+            <div class="profile__picture"></div>
+        </div>
+        <div class="profile__rightarea">
+            <div class="profile__textgroup">
+                <div class="profile__nameBox">
+                    <h2 class="profile__nameK">이혜성</h2>
+                    <p class="profile__nameE">LEE HYESUNG</p>
                 </div>
+                <div class="profile__job"></div>
+                <div class="profile__email">asd</div>
+                <div class="profile__phone">ss</div>
+                <div class="profile__gitadrees">s</div>
+                <div class="profile__gitadrees">s</div>
             </div>
+        </div>
     </section>
 
 
@@ -87,11 +97,15 @@
     <footer class="footer">
         <div class="inner">
             <div class="link-list">
-                <a href="https://github.com/comettlee" target="_blank"><div class="link-item git-link">Go GitHub</div></a>
-                <a href=""><div class="link-item notion-link">Go Notion</div></a>
+                <a href="https://github.com/comettlee" target="_blank">
+                    <div class="link-item git-link">Go GitHub</div>
+                </a>
+                <a href="">
+                    <div class="link-item notion-link">Go Notion</div>
+                </a>
                 <p class="copyright">
-                    &copy; <span class="this-year"></span>  Comet. All Rights Reserved.
-                  </p>
+                    &copy; <span class="this-year"></span> Comet. All Rights Reserved.
+                </p>
             </div>
         </div>
     </footer>

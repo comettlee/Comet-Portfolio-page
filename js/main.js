@@ -20,6 +20,11 @@ setTimeout(function () {
     profileInfo.classList.add('show');
 },1500);
 
+const mainMenu = document.querySelector('.main-menu');
+
+document.querySelector('.list-icon').addEventListener('click', () =>{
+    mainMenu.classList.toggle('active');
+})
 
 
 
