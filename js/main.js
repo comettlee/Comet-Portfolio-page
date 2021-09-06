@@ -22,9 +22,11 @@ setTimeout(function () {
 
 // 상단 메뉴바 메뉴리스트 클릭시 보이게
 const mainMenu = document.querySelector('.main-menu');
+const linkList = document.querySelector('.link-list');
 
 document.querySelector('.list-icon').addEventListener('click', () => {
         mainMenu.classList.toggle('active');
+        linkList.classList.toggle('active');
 })
 
 

@@ -39,6 +39,10 @@ section {
     display: flex;
 }
 
+.link-list.active {
+    display: flex;
+}
+
 
 /* HEADER */
 header {
@@ -64,6 +68,7 @@ header .material-icons {
 header>.inner {
     display: flex;
     transition: all 1s;
+    align-items: center;
 }
 
 header .title {
@@ -79,14 +84,14 @@ header .main-menu a:nth-child(1) {
     color: rgb(255, 184, 77);
 }
 
-div.main-menu {
+header .main-menu {
     display: flex;
     margin: auto;
     text-align: center;
     transition: all 1s;
 }
 
-div.main-menu a {
+header .main-menu a {
     color: #fff;
     font-size: 25px;
     font-weight: 600;
@@ -97,14 +102,46 @@ div.main-menu a {
     cursor: pointer;
 }
 
-header .sub-menu img {
+header .link-list {
+    height: 70px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+header .link-list .link-item {
     height: 50px;
     width: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    margin-right: 10px;
+    background-color: #fff;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
 }
+
+header .link-list .link-item:last-child {
+    margin-right: 0;
+}
+
+header .link-item .git {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+    background-size: cover;
+}
+
+header .link-item .notion {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-image: url('https://www.techm.kr/news/photo/202003/img_7993_0.png');
+    background-size: cover;
+}
+
+
 
 /* 화면 크기 최소 768px 미만 적용 */
 @media screen and (max-width: 768px) {
@@ -112,6 +149,10 @@ header .sub-menu img {
     /* HEADER */
     header {
         height: auto;
+    }
+
+    header>.inner {
+        align-items: baseline;
     }
 
     header .material-icons {
@@ -135,6 +176,11 @@ header .sub-menu img {
         flex-direction: column;
         display: none;
         margin-bottom: 10px;
+    }
+
+    header .link-list {
+        display: none;
+        margin: auto;
     }
 
     /* HOME */
@@ -395,7 +441,7 @@ div.main-menu a:hover:after {
         height: 50%;
         width: 100%;
     }
-    
+
 
     .profile .profile__rightarea .profile__textgroup {
         width: 100%;
@@ -419,7 +465,6 @@ div.main-menu a:hover:after {
 .footer {
     width: 100%;
     height: 100px;
-    min-width: 700px;
     position: relative;
     bottom: 0;
     display: flex;
@@ -433,7 +478,7 @@ div.main-menu a:hover:after {
     margin: 0 auto;
 }
 
-.footer .link-list {
+/* .footer .link-list {
     width: 100%;
     display: flex;
 }
@@ -442,12 +487,13 @@ div.main-menu a:hover:after {
     width: 100px;
     margin-left: 30px;
     font-weight: 700;
-}
+} */
 
 .footer .copyright {
     width: 100%;
     color: #999;
     font-size: 16px;
     text-align: center;
-    margin-right: 180px;
+    margin: auto;
+    line-height: 1.4;
 }
