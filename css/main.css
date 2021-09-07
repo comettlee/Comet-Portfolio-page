@@ -1,10 +1,17 @@
 /* COMMON */
+
+@font-face {
+    font-family: "NEXONLv2GothicBold";
+    src: url("../font/A_NEXON_Lv2_Gothic/NEXONLv2GothicBold.ttf");
+}
+
 body {
     height: 100%;
     min-height: 100%;
     margin: 0px;
     position: relative;
     overflow-x: hidden;
+    font-family: "NEXONLv2GothicBold", sans-serif ;
 }
 
 .inner {
@@ -43,7 +50,6 @@ section {
     display: flex;
 }
 
-
 /* HEADER */
 header {
     width: 100%;
@@ -63,7 +69,6 @@ header .material-icons {
     color: #fff;
     cursor: pointer;
 }
-
 
 header>.inner {
     display: flex;
@@ -141,8 +146,6 @@ header .link-item .notion {
     background-size: cover;
 }
 
-
-
 /* 화면 크기 최소 768px 미만 적용 */
 @media screen and (max-width: 768px) {
 
@@ -183,8 +186,6 @@ header .link-item .notion {
         margin: auto;
     }
 
-    /* HOME */
-
 }
 
 
@@ -202,18 +203,15 @@ div.main-menu a:after {
     transform: translateY(10px);
 }
 
-
 div.main-menu a:hover:after {
     opacity: 1;
     transform: translateY(0px);
 }
 
-
-
-
 /* HOME */
 .home {
     position: relative;
+    font-family: 'NEXONLv2GothicBold';
 }
 
 .home .inner {
@@ -353,7 +351,6 @@ div.main-menu a:hover:after {
     width: 55%;
     min-height: 50%;
     right: 0;
-    overflow: hidden;
 }
 
 .profile .profile__rightarea .profile__textgroup {
@@ -376,6 +373,7 @@ div.main-menu a:hover:after {
 .profile .profile__nameBox .profile__nameK {
     font-size: 60px;
     font-weight: 700;
+    text-align: end;
 }
 
 .profile .profile__nameBox .profile__nameE {
@@ -383,6 +381,23 @@ div.main-menu a:hover:after {
     margin-left: 10px;
     margin-top: 10px;
     color: #999;
+}
+
+.profile .profile__header {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.profile .profile__keyword {
+    font-size: 35px;
+    color: #A5CC23;
+}
+
+.profile .profile__text {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-right: 20px;
 }
 
 /* PROFILE 1440PX 미만*/
@@ -401,6 +416,7 @@ div.main-menu a:hover:after {
     }
 }
 
+/* PROFILE 768PX 미만*/
 @media screen and (max-width: 768px) {
 
     /* PROFILE */
@@ -439,27 +455,33 @@ div.main-menu a:hover:after {
 
     .profile .profile__rightarea {
         height: 50%;
-        width: 100%;
-    }
-
-
-    .profile .profile__rightarea .profile__textgroup {
-        width: 100%;
-        top: 10%;
-        left: 20%;
+        width: 50%;
     }
 
     .profile .profile__nameBox .profile__nameK {
         font-size: 40px;
+        font-weight: 700;
+    }
+    
+    .profile .profile__nameBox .profile__nameE {
+        font-size: 50px;
+        margin-left: 10px;
+        margin-top: 10px;
+        color: #999;
     }
 
-    .profile .profile__nameBox .profile__nameE {
-        font-size: 30px;
+    .profile .profile__header {
+        font-size: 15px;
+    }
+    
+    .profile .profile__keyword {
+        font-size: 25px;
+    }
+    
+    .profile .profile__text {
+        font-size: 16px;
     }
 }
-
-
-
 
 /* FOOTER */
 .footer {
@@ -477,17 +499,6 @@ div.main-menu a:hover:after {
     width: 1500px;
     margin: 0 auto;
 }
-
-/* .footer .link-list {
-    width: 100%;
-    display: flex;
-}
-
-.footer .link-list .link-item {
-    width: 100px;
-    margin-left: 30px;
-    font-weight: 700;
-} */
 
 .footer .copyright {
     width: 100%;
