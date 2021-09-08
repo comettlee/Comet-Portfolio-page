@@ -356,9 +356,9 @@ div.main-menu a:hover:after {
 .profile .profile__rightarea .profile__textgroup {
     background-color: #fff;
     position: absolute;
-    top: 25%;
+    top: 22%;
     left: 25%;
-    width: auto;
+    width: 50%;
     height: 50%;
     margin: auto;
 }
@@ -395,7 +395,7 @@ div.main-menu a:hover:after {
 }
 
 .profile .profile__text {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.4;
     margin-right: 20px;
 }
@@ -482,6 +482,28 @@ div.main-menu a:hover:after {
         font-size: 16px;
     }
 }
+
+/* CONTANT */
+.contact {
+    position: relative;
+    background-color: #fff;
+}
+.contact .inner{
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #A5CC23;
+}
+.contact .profile__textgroup{
+    width: 100%;
+    justify-content: center;
+}
+.contact .headertext{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
 
 /* FOOTER */
 .footer {
